@@ -30,6 +30,7 @@ path.velocityY = 4;
 //creating boy running
 boy = createSprite(70,580,20,20);
 boy.addAnimation("SahilRunning",boyImg);
+boy.addAnimation("SahilStops" , endImg);
 boy.scale=0.08;
   
   
@@ -79,8 +80,8 @@ function draw() {
       if(swordGroup.isTouching(boy)) {
         gameState=END;
         
-         boy.addAnimation(endImg);
-        // boy.addAnimation("SahilRunning",endImg);
+         //boy.addAnimation(endImg);
+         boy.changeAnimation("SahilStops",endImg);
         // boy.addAnimation("SahilRunning");
         // boy.addAnimation(SahilRunning,endImg);
 
